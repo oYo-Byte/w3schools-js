@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Can Change HTML Attributes</title>
+</head>
+<body>
+
+    <div>
+        <img src="../images/pic_bulboff.gif" id="bulb">
+    </div>
+    <div>
+        <button type="button" onclick="turn('on')">开💡</button>
+        <button type="button" onclick="turn('off')">关💡</button>
+    </div>
+    <script>
+        var bulb = document.getElementById('bulb');
+        function turn(status) {
+            if (status == 'on'){
+                bulb.src = '../images/pic_bulbon.gif';
+            }else{
+                bulb.src = '../images/pic_bulboff.gif';
+            }
+        }
+    </script>
+
+
+</body>
+</html>
