@@ -7,10 +7,17 @@
 <body>
 <h1>My First JavaScript</h1>
 
-<button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
+<button type="button" onclick="showDate()">
     Click me to display Date and Time.
 </button>
 
 <p id="demo"></p>
+
+<script>
+    var demo = document.getElementById('demo');
+    function showDate() {
+        demo.innerHTML = new Date();
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Can Change HTML Styles (CSS)</title>
+</head>
+<body>
+
+<div>
+    <button onclick="changeStyles('fontSize')">change font size </button>
+    <button onclick="changeStyles('color')">change font color</button>
+</div>
+
+<div>
+    <p id="element">
+        Changing the style of an HTML element, is a variant of changing an HTML attribute:
+    </p>
+</div>
+<script>
+    var element = document.getElementById("element");
+    function changeStyles(style) {
+        var elementStyle = element.style;
+        switch (style){
+            case 'fontSize':
+                elementStyle.fontSize = (Math.ceil(Math.random()*20) + 14) +'px';
+                break;
+            case 'color':
+                var red = Math.ceil(Math.random()*256),green = Math.ceil(Math.random()*256),blue = Math.ceil(Math.random()*256);
+                elementStyle.color = 'rgb('+ red + ',' + green + ',' + blue + ')';
+                break;
+        }
+    }
+</script>
+</body>
+</html>
