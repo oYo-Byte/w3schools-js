@@ -7,7 +7,7 @@
 <body>
 
 <div>
-    <button onclick="changeStyles('fontSize')">change font size </button>
+    <button onclick="changeStyles('fontSize')">change font size</button>
     <button onclick="changeStyles('color')">change font color</button>
 </div>
 
@@ -20,13 +20,13 @@
     var element = document.getElementById("element");
     function changeStyles(style) {
         var elementStyle = element.style;
-        switch (style){
+        switch (style) {
             case 'fontSize':
-                elementStyle.fontSize = (Math.ceil(Math.random()*20) + 14) +'px';
+                elementStyle.fontSize = (Math.ceil(Math.random() * 20) + 14) + 'px';
                 break;
             case 'color':
-                var red = Math.ceil(Math.random()*256),green = Math.ceil(Math.random()*256),blue = Math.ceil(Math.random()*256);
-                elementStyle.color = 'rgb('+ red + ',' + green + ',' + blue + ')';
+                var red = Math.ceil(Math.random() * 256), green = Math.ceil(Math.random() * 256), blue = Math.ceil(Math.random() * 256);
+                elementStyle.color = 'rgb(' + red + ',' + green + ',' + blue + ')';
                 break;
         }
     }
