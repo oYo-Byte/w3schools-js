@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Can Control HTML Elements Display</title>
+    <style type="text/css">
+        body {
+            background: #000000;
+        }
+
+        img {
+            margin-left: 600px;
+            height: 60px;
+            display: none;
+            transform: rotate(180deg);
+            -ms-transform: rotate(180deg); /* IE 9 */
+            -moz-transform: rotate(180deg); /* Firefox */
+            -webkit-transform: rotate(180deg); /* Safari 和 Chrome */
+            -o-transform: rotate(180deg); /* Opera */
+        }
+    </style>
+</head>
+<body>
+<img id="img" src="../images/pic_bulbon.gif">
+
+<script>
+    var on = false;
+    setInterval(function () {
+        var img = document.getElementById("img"), body = document.body;
+        if (!on) {
+            img.style.display = "block";
+            body.style.background = '#FFFFFF';
+            on = true;
+        } else {
+            img.style.display = "none";
+            body.style.background = '#000000';
+            on = false;
+        }
+    }, 3000);
+</script>
+
+</body>
+</html>
