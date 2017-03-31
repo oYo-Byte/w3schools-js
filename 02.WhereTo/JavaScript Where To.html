@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Where To</title>
+    <script>
+        function inHead() {
+            document.getElementById("pEle").textContent = 'call the function in head';
+        }
+    </script>
+    <script src="externalScript.js"></script>
+</head>
+<body>
+
+<p id="pEle">
+    Hi,I am Paragraph!
+</p>
+<button type="button" onclick="inHead()">Placed In Head</button>
+<button type="button" onclick="inBody()">Placed In Body</button>
+<button type="button" onclick="externalFunc()">Placed In External File</button>
+<script>
+    function inBody() {
+        document.getElementById("pEle").textContent = 'call the function in body';
+    }
+</script>
+
+</body>
+</html>
