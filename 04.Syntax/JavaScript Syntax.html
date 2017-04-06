@@ -5,22 +5,53 @@
     <title>JavaScript Syntax</title>
 </head>
 <body>
+<h4>JavaScript Programs</h4>
+<p id="program"></p>
 
-<h4>
-    JavaScript Programs
-</h4>
-<p id="program">
+<h4>JavaScript Literals</h4>
+<p id="literal"></p>
 
-</p>
-<h1>
+<h4>JavaScript Variables</h4>
+<p id="variable"></p>
 
-</h1>
+<h4>JavaScript Operators</h4>
+<p id="operator"></p>
+
+<h4>JavaScript Expressions</h4>
+<p id="expression"></p>
+
+<h4>JavaScript Comments</h4>
+<p id="comment"></p>
+
+<h4>JavaScript is Case Sensitive</h4>
+<p id="caseSensitive1"></p>
+<p id="caseSensitive2"></p>
+
 <script>
     var x, y, z;
     x = 5;
     y = 7;
     z = x + y;
     document.getElementById('program').innerText = z;
+
+    document.getElementById('literal').innerText = 10.50 + 1001;
+
+    var i = 0;
+    document.getElementById('variable').innerText = i;
+
+    document.getElementById('operator').innerText = (5 + 6) * 10;
+
+    document.getElementById('expression').innerText = i + 10 + "10";
+
+    //z = 100
+    document.getElementById('comment').innerText = z;
+
+    var lastname, lastName;
+    lastName = "Doe";
+    lastname = "Peterson";
+    document.getElementById('caseSensitive1').innerText = lastname;
+    document.getElementById('caseSensitive2').innerText = lastName;
+
 </script>
 </body>
 </html>
