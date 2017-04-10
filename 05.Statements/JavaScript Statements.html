@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Statements</title>
+</head>
+<body>
+<h4>JavaScript Statements</h4>
+<p id="statement"></p>
+
+<h4>JavaScript Programs</h4>
+<p id="program"></p>
+
+<h4>JavaScript Line Length and Line Breaks</h4>
+<p id="line"></p>
+
+<h4>JavaScript Code Blocks</h4>
+<p id="code_blocks">Hi</p>
+<button onclick="change()">change</button>
+<script>
+    document.getElementById("statement").innerHTML = "Hello Dolly.";
+
+    var x, y, z;
+    x = 5;
+    y = 7;
+    z = x + y;
+    document.getElementById("program").innerHTML = z;
+
+    //JavaScript Line Length and Line Breaks
+    document.getElementById("line").innerHTML =
+        "Hello Dolly.";
+
+    //JavaScript Code Blocks
+    function change() {
+        document.getElementById("code_blocks").innerHTML = "Hello";
+    }
+
+</script>
+
+</body>
+</html>
