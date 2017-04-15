@@ -29,8 +29,14 @@
 <p id="multiplication-assignment"></p>
 <p id="division-assignment"></p>
 <p id="modulus-assignment"></p>
-<p id="increment-assignment"></p>
-<p id="decrement-assignment"></p>
+
+<h3>JavaScript String Operators</h3>
+<p id="concatenate"></p>
+<p id="concatenate-assignment"></p>
+
+<h3>Adding Strings and Numbers</h3>
+<p id="number"></p>
+<p id="string-number"></p>
 <script>
     var x = 10;
     document.getElementById('assignment').innerHTML = x;
@@ -57,7 +63,29 @@
     y--;
     document.getElementById('decrement').innerHTML = y;
 
+    z += y;
+    document.getElementById('addition-assignment').innerHTML = z;
+    z -= y;
+    document.getElementById('subtraction-assignment').innerHTML = z;
+    z *= y;
+    document.getElementById('multiplication-assignment').innerHTML = z;
+    z /= x;
+    document.getElementById('division-assignment').innerHTML = z;
+    z %= y;
+    document.getElementById('modulus-assignment').innerHTML = z;
 
+    var str1 = "Hi";
+    var str2 = "nice to meet you";
+    var str3 = str1 + ',' + str2;
+    document.getElementById('concatenate').innerHTML = str3;
+
+    str1 += '!';
+    document.getElementById('concatenate-assignment').innerHTML = str1;
+
+    var number = 5 + 5;
+    document.getElementById('number').innerHTML = number;
+    var stringNumber = "5" + 20;
+    document.getElementById('string-number').innerHTML = stringNumber;
 
 </script>
 </body>
