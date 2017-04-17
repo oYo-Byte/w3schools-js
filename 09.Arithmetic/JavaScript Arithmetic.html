@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Arithmetic</title>
+</head>
+<body>
+
+<h3>JavaScript Arithmetic Operators</h3>
+<p id="addition"></p>
+<p id="subtraction"></p>
+<p id="multiplication"></p>
+<p id="division"></p>
+<p id="modulus"></p>
+<p id="increment"></p>
+<p id="decrement"></p>
+
+<h3>Operator Precedence</h3>
+<p id="precedence"></p>
+
+<script>
+    var x = 12, y = 40;
+    z = x + y;
+    document.getElementById('addition').textContent = z;
+    z = x - y;
+    document.getElementById('subtraction').textContent = z;
+    z = x * y;
+    document.getElementById('multiplication').textContent = z;
+    z = x / y;
+    document.getElementById('division').textContent = z;
+    z = x % y;
+    document.getElementById('modulus').textContent = z;
+    x++;
+    document.getElementById('increment').textContent = x;
+    y--;
+    document.getElementById('decrement').textContent = y;
+
+    document.getElementById('precedence').textContent = 10 + 350 * 2;
+</script>
+</body>
+</html>
