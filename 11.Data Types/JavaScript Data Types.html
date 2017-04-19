@@ -28,6 +28,31 @@
 <p id="single-quotes-inside-double-quotes"></p>
 <p id="double-quotes-inside-single-quotes"></p>
 
+<h3>JavaScript Numbers</h3>
+<p id="with-decimals"></p>
+<p id="without-decimals"></p>
+
+<h3>JavaScript Booleans</h3>
+<p id="bool-true"></p>
+<p id="bool-false"></p>
+
+<h3>JavaScript Arrays</h3>
+<p id="array"></p>
+
+<h3>JavaScript Objects</h3>
+<p id="person-name"></p>
+
+<h3>Complex Data</h3>
+<p id="typeof-array"></p>
+<p id="typeof-object"></p>
+<p id="typeof-function"></p>
+
+<h3>Undefined</h3>
+<p id="typeof-undefined"></p>
+
+<h3>Difference Between Undefined and Null</h3>
+<p id="difference"></p>
+
 <script>
     var age = 34;
     var name = "John";
@@ -62,6 +87,30 @@
     var doubleQuotesInsideSingleQuotes = 'He is called "Johnny"';
     document.getElementById("double-quotes-inside-single-quotes").textContent = doubleQuotesInsideSingleQuotes;
 
+    var x1 = 32.53;
+    var x2 = 34;
+    document.getElementById("with-decimals").textContent = x1;
+    document.getElementById("without-decimals").textContent = x2;
+
+    var boolTrue = true;
+    var boolFalse = false;
+    document.getElementById("bool-true").textContent = boolTrue;
+    document.getElementById("bool-false").textContent = boolFalse;
+
+    var numbers = [0, 1, 2, 3, 5, 6];
+    document.getElementById("array").textContent = typeof numbers[0];
+
+    document.getElementById("person-name").textContent = person.name;
+
+    document.getElementById("typeof-array").textContent = typeof numbers;
+    document.getElementById("typeof-object").textContent = typeof person;
+    function func() {
+    }
+    document.getElementById("typeof-function").textContent = typeof func;
+
+    document.getElementById("typeof-undefined").textContent = typeof b;
+
+    document.getElementById("difference").innerHTML = typeof undefined + "<br>" + typeof null + "<br>" + (null === undefined) + "<br>" + (null == undefined)
 </script>
 
 </body>
