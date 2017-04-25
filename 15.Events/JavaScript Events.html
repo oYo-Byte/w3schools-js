@@ -12,11 +12,15 @@
 <button onclick="this.textContent = new Date()">Time?</button>
 <br>
 
+<!--onchange事件在input失去焦点时才触发-->
+<input onchange="document.getElementById('onchange').textContent = this.value">
 <p id="onchange"></p>
 
 <div style="width: 300px;height: 300px; border: solid 1px red;"
      onmouseover="this.style.background = '#000000'" onmouseleave="this.style.background = '#ffffff'"></div>
 
+<!--第一个keydown时，键盘事件的值还没赋值给input，所以此时this.value是空串-->
+<input onkeydown="document.getElementById('key-down').textContent = this.value">
 <p id="key-down"></p>
 
 <input onkeydown="document.getElementById('key-down-typeof').textContent = typeof this.value">
