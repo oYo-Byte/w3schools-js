@@ -21,6 +21,16 @@
 <p id="double-quote"></p>
 <p id="backslash"></p>
 
+<h3>Breaking Long Code Lines</h3>
+<p id="line-break"></p>
+
+<h3>Strings Can be Objects</h3>
+<p id="string"></p>
+<p id="string-object"></p>
+<p id="string-equal-object"></p>
+<p id="string-equal-object-with-type"></p>
+<p id="object-equal-object-with-type"></p>
+
 <script>
     var double = "Hi";
     var single = 'Hello';
@@ -42,6 +52,19 @@
     document.getElementById("double-quote").textContent = "We are the so-called \"Vikings\" from the north.";
     document.getElementById("backslash").textContent = "file path is D:\\workspace\\test.txt";
 
+    document.getElementById("line-break").innerHTML = "Hello \
+        Dolly!";
+
+    var x = "Hi";
+    var y = new String("Hi");
+    var z = new String("Hi");
+    document.getElementById("string").textContent = typeof x;
+    document.getElementById("string-object").textContent = typeof y;
+
+    document.getElementById("string-equal-object").textContent = x == y;
+    document.getElementById("string-equal-object-with-type").textContent = x === y;
+    document.getElementById("object-equal-object-with-type").textContent = z === y;
+    
 </script>
 
 </body>
