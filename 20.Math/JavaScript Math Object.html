@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Math Object</title>
+</head>
+<body>
+
+<p id="pi"></p>
+
+<h4>Math.round()</h4>
+<p id="round1"></p>
+<p id="round2"></p>
+
+<h4>Math.pow()</h4>
+<p id="pow"></p>
+
+<h4>Math.sqrt()</h4>
+<p id="sqrt"></p>
+
+<h4>Math.abs()</h4>
+<p id="abs"></p>
+
+<h4>Math.ceil()</h4>
+<p id="ceil"></p>
+
+<h4>Math.floor()</h4>
+<p id="floor"></p>
+
+<h4>Math.sin()</h4>
+<p id="sin"></p>
+
+<h4>Math.cos()</h4>
+<p id="cos"></p>
+
+<h4>Math.min()</h4>
+<p id="min"></p>
+
+<h4>Math.max()</h4>
+<p id="max"></p>
+
+<h4>Math.random()</h4>
+<p id="random"></p>
+
+<h4>Math Properties (Constants)</h4>
+<p id="E"></p>
+<p id="SQRT2"></p>
+<p id="SQRT1_2"></p>
+<p id="LN2"></p>
+<p id="LN10"></p>
+<p id="LOG2E"></p>
+<p id="LOG10E"></p>
+
+<script>
+    document.getElementById("pi").textContent = Math.PI;
+
+    document.getElementById("round1").textContent = Math.round(4.5);
+    document.getElementById("round2").textContent = Math.round(4.4);
+
+    document.getElementById("pow").textContent = Math.pow(4, 4);
+
+    document.getElementById("sqrt").textContent = Math.sqrt(4);
+
+    document.getElementById("abs").textContent = Math.abs(-4);
+
+    document.getElementById("ceil").textContent = Math.ceil(4.1);
+
+    document.getElementById("floor").textContent = Math.floor(4.9);
+
+    document.getElementById("sin").textContent = Math.sin(90 * Math.PI / 180);
+
+    document.getElementById("cos").textContent = Math.cos(0 * Math.PI / 180);
+
+    document.getElementById("min").textContent = Math.min(0, 150, 30, 20, -8, -200);
+
+    document.getElementById("max").textContent = Math.max(0, 150, 30, 20, -8, -200);
+
+    document.getElementById("random").textContent = Math.random();
+
+    document.getElementById("E").textContent = 'Math.E = ' + Math.PI;
+    document.getElementById("SQRT2").textContent = 'Math.SQRT2 = ' + Math.SQRT2;
+    document.getElementById("SQRT1_2").textContent = 'Math.SQRT1_2 = ' + Math.SQRT1_2;
+    document.getElementById("LN2").textContent = 'Math.LN2 = ' + Math.LN2;
+    document.getElementById("LN10").textContent = 'Math.LN10 = ' + Math.LN10;
+    document.getElementById("LOG2E").textContent = 'Math.LOG2E = ' + Math.LOG2E;
+    document.getElementById("LOG10E").textContent = 'Math.LOG10E = ' + Math.LOG10E;
+</script>
+
+</body>
+</html>
