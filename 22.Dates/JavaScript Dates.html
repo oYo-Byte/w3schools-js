@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Dates</title>
+</head>
+<body>
+
+<h4>Displaying Dates</h4>
+<p id="display"></p>
+
+<h4>Creating Date Objects</h4>
+<p id="create"></p>
+<p id="create-from-date-string"></p>
+<p id="create-use-number"></p>
+<p id="create-use-7-numbers"></p>
+<p id="create-use-3-numbers"></p>
+
+<h4>Displaying Dates</h4>
+<p id="to-string"></p>
+<p id="to-UTC-string"></p>
+<p id="to-date-string"></p>
+
+<script>
+    document.getElementById("display").textContent = Date();
+
+    document.getElementById("create").textContent = new Date();
+    document.getElementById("create-from-date-string").textContent = new Date('2017-05-05 21:04:23');
+    document.getElementById("create-use-number").textContent = new Date(1511188400000);
+    document.getElementById("create-use-7-numbers").textContent = new Date(2017, 4, 5, 21, 9, 23, 233);
+    document.getElementById("create-use-3-numbers").textContent = new Date(2017, 4, 5);
+
+    document.getElementById("to-string").textContent = new Date().toString();
+    document.getElementById("to-UTC-string").textContent = new Date().toUTCString();
+    document.getElementById("to-date-string").textContent = new Date().toDateString();
+    
+</script>
+
+</body>
+</html>
