@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Array Methods</title>
+</head>
+<body>
+
+<h4>Converting Arrays to Strings</h4>
+<p id="to-string"></p>
+<p id="join"></p>
+
+<h4>Popping and Pushing</h4>
+<h5>Popping</h5>
+<p id="pop"></p>
+<p id="pop-value"></p>
+
+<h5>Pushing</h5>
+<p id="push"></p>
+<p id="push-length"></p>
+
+<h4>Shifting Elements</h4>
+<p id="shift"></p>
+<p id="shift-value"></p>
+<p id="unshift"></p>
+<p id="unshift-length"></p>
+
+<h4>Changing Elements</h4>
+<p id="index"></p>
+<p id="add-element-use-length"></p>
+
+<h4>Deleting Elements</h4>
+<p id="delete"></p>
+
+<h4>Splicing an Array</h4>
+<p id="splice"></p>
+<h5>Using splice() to Remove Elements</h5>
+<p id="splice-remove"></p>
+
+<h4>Merging (Concatenating) Arrays</h4>
+<p id="concat-two-arrays"></p>
+
+<h4>Slicing an Array</h4>
+<p id="slice"></p>
+
+<script>
+
+    var cars = ["Saab", "Volvo", "BMW"];
+    document.getElementById("to-string").textContent = cars.toString();
+    document.getElementById("join").textContent = cars.join('#');
+
+    var car = cars.pop();
+    document.getElementById("pop").textContent = cars;
+    document.getElementById("pop-value").textContent = car;
+
+    var car2 = cars.push('TOYOTA');
+    document.getElementById("push").textContent = cars;
+    document.getElementById("push-length").textContent = car2;
+
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    var fruit = fruits.shift();
+    document.getElementById("shift").textContent = fruits;
+    document.getElementById("shift-value").textContent = fruit;
+    var fruit2 = fruits.unshift('Lemon');
+    document.getElementById("unshift").textContent = fruits;
+    document.getElementById("unshift-length").textContent = fruit2;
+
+    fruits[0] = 'Kiwi';
+    document.getElementById("index").textContent = fruits;
+    fruits[fruits.length] = 'Lemon';
+    document.getElementById("add-element-use-length").textContent = fruits;
+
+    delete fruits[0];
+    document.getElementById("delete").textContent = typeof fruits[0];
+
+    fruits.splice(2, 0, "Lemon", "Kiwi");
+    document.getElementById("splice").textContent = fruits;
+    fruits.splice(0, 1);
+    document.getElementById("splice-remove").textContent = fruits;
+
+    var newArray = cars.concat(fruits);
+    document.getElementById("concat-two-arrays").textContent = newArray;
+
+    var newFruits = fruits.slice(3);
+    document.getElementById("slice").textContent = newFruits;
+    
+</script>
+
+</body>
+</html>
