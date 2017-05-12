@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Sorting Arrays</title>
+</head>
+<body>
+
+<h4>Sorting an Array</h4>
+<p id="sort"></p>
+
+<h4>Reversing an Array</h4>
+<p id="reverse"></p>
+
+<h4>Numeric Sort</h4>
+<p id="numeric-sort-asc"></p>
+<p id="numeric-sort-desc"></p>
+
+<h4>The Compare Function</h4>
+<p id="numeric-sort-default"></p>
+
+<h4>Sorting an Array in Random Order</h4>
+<p id="sort-random"></p>
+
+<h4>Sorting Object Arrays</h4>
+<p id="sort-cars"></p>
+<p id="sort-cars-by-type"></p>
+
+<script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    fruits.sort();          //对数组进行排序
+    document.getElementById("sort").textContent = fruits;
+    fruits.reverse();       //反转数组
+    document.getElementById("reverse").textContent = fruits;
+
+    /**
+     * 定义顺序排序比较函数
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function asc(a, b) {
+        return a - b;
+    }
+
+    /**
+     * 定义倒序排序比较函数
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function desc(a, b) {
+        return b - a;
+    }
+    var points = [40, 100, 1, 5, 25, 10];
+    points.sort(asc); //使用顺序排序数组
+    document.getElementById("numeric-sort-asc").textContent = points;
+    points = [40, 100, 1, 5, 25, 10];
+    points.sort(desc);//使用倒序排序数组
+    document.getElementById("numeric-sort-desc").textContent = points;
+    points = [40, 100, 1, 5, 25, 10];
+    points.sort(); //使用默认方式排序数组
+    document.getElementById("numeric-sort-default").textContent = points;
+
+    /**
+     * 定义随机排序比较函数
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function randomSort(a, b) {
+        return 0.5 - Math.random();
+    }
+    points = [40, 100, 1, 5, 25, 10];
+    points.sort(randomSort);
+    document.getElementById("sort-random").textContent = points;
+
+    var cars = [
+        {
+            type: "Volvo",
+            year: 2016,
+            toString: function () {
+                return this.type;
+            }
+        },
+        {
+            type: "Saab",
+            year: 2001,
+            toString: function () {
+                return this.type;
+            }
+        },
+        {
+            type: "BMW",
+            year: 2010,
+            toString: function () {
+                return this.type;
+            }
+        }
+    ];
+
+    /**
+     * 定义根据汽车生产年排序比较函数
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function sortCarsByYear(a, b) {
+        return a.year - b.year;
+    }
+    cars.sort(sortCarsByYear);
+    document.getElementById("sort-cars").textContent = cars;
+    cars.sort(sortCarsByYear);
+    document.getElementById("sort-cars").textContent = cars;
+
+    /**
+     * 定义根据汽车品牌比较函数
+     * @param a
+     * @param b
+     * @returns {number}
+     */
+    function sortCarsByType(a, b) {
+        var x = a.type.toLowerCase();
+        var y = b.type.toLowerCase();
+        if (x < y) {
+            return -1;
+        }
+        if (x > y) {
+            return 1;
+        }
+        return 0;
+    }
+    cars.sort(sortCarsByType);
+    document.getElementById("sort-cars-by-type").textContent = cars;
+
+</script>
+</body>
+</html>
