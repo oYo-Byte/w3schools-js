@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Booleans</title>
+</head>
+<body>
+
+<h4>The Boolean() Function</h4>
+<p id="boolean"></p>
+
+<h4>Everything With a "Real" Value is True</h4>
+<p id="true"></p>
+
+<h4>Everything Without a "Real" is False</h4>
+<p id="false"></p>
+
+<h4>Booleans Can be Objects</h4>
+<p id="boolean-object"></p>
+<p id="equal"></p>
+<p id="==="></p>
+<p id="compare-objects"></p>
+
+<script>
+
+    document.getElementById("boolean").textContent = Boolean(122 > 12);
+
+    document.getElementById("true").innerHTML =
+        "100 is " + 100 + "<br>" +
+        "PI is " + Math.PI + "<br>" +
+        "-15 is " + (-15) + "<br>" +
+        "Any (not empty) string is " + 'Hi' + "<br>" +
+        "Even the string 'false' is " + 'false' + "<br>" +
+        "Any expression (except zero) is " + (5 < 6);
+
+    var x;
+    document.getElementById("false").innerHTML =
+        "0 is " + Boolean(0) + "<br>" +
+        "-0 is " + Boolean(-0) + "<br>" +
+        "''(empty string) is " + Boolean('') + "<br>" +
+        "undefined variable is " + Boolean(x) + "<br>" +
+        "null is " + Boolean(null) + "<br>" +
+        "false is " + Boolean(false) + "<br>" +
+        "NaN is " + Boolean(10 / "H");
+
+    document.getElementById("boolean-object").textContent = typeof new Boolean(false);
+
+    document.getElementById("equal").textContent = false == new Boolean(false);
+    document.getElementById("===").textContent = false === new Boolean(false);
+    document.getElementById("compare-objects").textContent = new Boolean(false) === new Boolean(false);
+
+</script>
+</body>
+</html>
