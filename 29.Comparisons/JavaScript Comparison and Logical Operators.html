@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Comparison and Logical Operators</title>
+</head>
+<body>
+
+<h4>Comparison Operators</h4>
+<p id="equal-to-8"></p>
+<p id="equal-to-5"></p>
+<p id="equal-to-string-5"></p>
+<p id="equal-value-and-type-to-5"></p>
+<p id="equal-value-and-type-to-string-5"></p>
+<p id="not-equal-to-8"></p>
+
+<p id="not-equal-value-nor-type-to-5"></p>
+<p id="not-equal-value-nor-type-to-8"></p>
+<p id="not-equal-value-nor-type-to-string-5"></p>
+
+<p id="greater-than-8"></p>
+<p id="less-than-8"></p>
+<p id="greater-than-or-equal-to-8"></p>
+<p id="less-than-or-equal-to-8"></p>
+
+<script>
+    /**
+     * @file
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月16日
+     *
+     * @copyright (c) 2014-$2017 海量云图（北京）数据技术有限公司
+     */
+
+    var x = 5;
+    document.getElementById("equal-to-8").textContent = x == 8;     //比较x和8的值是否相等
+    document.getElementById("equal-to-5").textContent = x == 5;     //比较x和5的值是否相等
+    document.getElementById("equal-to-string-5").textContent = x == '5'; //比较x和字符串5的值是否相等
+
+    document.getElementById("equal-value-and-type-to-5").textContent = x === 5;     //比较x和5的值和类型是否相等
+    document.getElementById("equal-value-and-type-to-string-5").textContent = x === '5'; //比较x和字符串5的值和类型是否相等
+
+    document.getElementById("not-equal-to-8").textContent = x != 8;     //比较x和8的值是否不相等
+
+    document.getElementById("not-equal-value-nor-type-to-5").textContent = x !== 5;     //比较x和5的值和类型是否不相等
+    document.getElementById("not-equal-value-nor-type-to-8").textContent = x !== 8;     //比较x和8的值和类型是否不相等
+    document.getElementById("not-equal-value-nor-type-to-string-5").textContent = x !== '5'; //比较x和字符串5的值和类型是否不相等
+
+    document.getElementById("greater-than-8").textContent = x > 8;     //比较x是否大于8的值
+    document.getElementById("less-than-8").textContent = x < 8;     //比较x是否小于8的值
+
+    document.getElementById("greater-than-or-equal-to-8").textContent = x >= 8;     //比较x是否大于或等于8的值
+    document.getElementById("less-than-or-equal-to-8").textContent = x <= 8;     //比较x是否小于或等于8的值
+
+</script>
+
+</body>
+</html>
