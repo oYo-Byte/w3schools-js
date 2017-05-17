@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript If...Else Statements</title>
+</head>
+<body>
+
+<h4>The if Statement</h4>
+<p id="if"></p>
+
+<h4>The else Statement</h4>
+<p id="else"></p>
+
+<h4>The else if Statement</h4>
+<p id="else-if"></p>
+
+<script>
+    /**
+     * @file JavaScript If...Else Statements
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月17日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    var hour = 15;
+    var greeting = '';
+    if (hour < 18) {
+        greeting = "Good day";
+    }
+    document.getElementById("if").textContent = greeting;
+    hour = 21;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+    document.getElementById("else").textContent = greeting;
+
+    hour = 8;
+    if (hour < 10) {
+        greeting = "Good morning";
+    } else if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+
+    document.getElementById("else-if").textContent = greeting;
+
+</script>
+
+</body>
+</html>

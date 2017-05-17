@@ -23,14 +23,22 @@
 <p id="greater-than-or-equal-to-8"></p>
 <p id="less-than-or-equal-to-8"></p>
 
+<h4>Logical Operators</h4>
+<p id="AND"></p>
+<p id="OR"></p>
+<p id="NOT"></p>
+
+<h4>Conditional (Ternary) Operator</h4>
+<p id="ternary"></p>
+
 <script>
     /**
-     * @file
+     * @file  JavaScript Comparison and Logical Operators
      *
      * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
      *     创建于 2017年05月16日
      *
-     * @copyright (c) 2014-$2017 海量云图（北京）数据技术有限公司
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
      */
 
     var x = 5;
@@ -52,6 +60,13 @@
 
     document.getElementById("greater-than-or-equal-to-8").textContent = x >= 8;     //比较x是否大于或等于8的值
     document.getElementById("less-than-or-equal-to-8").textContent = x <= 8;     //比较x是否小于或等于8的值
+
+    var y = 12;
+    document.getElementById("AND").textContent = x <= 8 && y > 11;     //比较x是否小于或等于8并且y大于11
+    document.getElementById("OR").textContent = x >= 8 || y > 11;     //比较x是否大于或等于8并且y是否大于11
+    document.getElementById("NOT").textContent = !(x >= 8 || y > 11);
+
+    document.getElementById("ternary").textContent = (x < 3) ? 'x的值小于3' : 'x的值不小于3';
 
 </script>
 
