@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Switch Statement</title>
+</head>
+<body>
+
+<h4>The JavaScript Switch Statement</h4>
+<p id="switch"></p>
+
+<h5>The default Keyword</h5>
+<p id="default"></p>
+
+<h5>Common Code Blocks</h5>
+<p id="common-code-blocks"></p>
+
+<script>
+    /**
+     * @file JavaScript Switch Statement
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月18日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    var day = '';
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case 6:
+            day = "Saturday";
+    }
+
+    document.getElementById("switch").textContent = "Today is " + day;
+
+    var text = '';
+    switch (new Date().getDay()) {
+        case 6:
+            text = "Today is Saturday";
+            break;
+        case 0:
+            text = "Today is Sunday";
+            break;
+        default:
+            text = "周末怎么还没到啊！";
+    }
+    document.getElementById("default").textContent = text;
+
+    var str = '';
+    switch (new Date().getDay()) {
+        case 4:
+        case 5:
+            str = "周末快到啦~";
+            break;
+        case 0:
+        case 6:
+            str = "已经周末啦~";
+            break;
+        default:
+            str = "周末怎么还没到啊！";
+    }
+    document.getElementById("common-code-blocks").textContent = str;
+
+</script>
+
+</body>
+</html>
