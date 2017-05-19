@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript While Loop</title>
+</head>
+<body>
+
+<h4>The While Loop</h4>
+<p id="while"></p>
+<h4>The Do/While Loop</h4>
+<p id="do-while"></p>
+
+<script>
+    /**
+     * @file JavaScript While Loop
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月19日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    var i = 0, text = '';
+    while (i < 10) {
+        text += "The number is " + i + '<br>';
+        i++;
+    }
+    document.getElementById("while").innerHTML = text;
+
+    i = 0;
+    text = '';
+    do {
+        text += "The number is " + i + '<br>';
+        i++;
+    }
+    while (i < 10);
+    document.getElementById("do-while").innerHTML = text;
+
+</script>
+
+</body>
+</html>

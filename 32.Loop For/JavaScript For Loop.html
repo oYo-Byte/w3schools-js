@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript For Loop</title>
+</head>
+<body>
+
+<h4>JavaScript Loops</h4>
+<p id="for"></p>
+
+<h4>Different Kinds of Loops</h4>
+<h5>The For Loop</h5>
+<p id="for-loop"></p>
+
+<h5>The For/In Loop</h5>
+<p id="for-in"></p>
+
+<script>
+    /**
+     * @file JavaScript For Loop
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月19日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+    var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+    var i, text = '';
+    for (i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+    }
+
+    document.getElementById("for").innerHTML = text;
+
+    for (i = 0, len = cars.length, text = ""; i < len;) {
+        text += cars[i] + "<br>";
+        i++;
+    }
+    document.getElementById("for-loop").innerHTML = text;
+
+    var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 25
+    };
+    var str = "";
+    var x;
+    for (x in person) {
+        str += person[x];
+    }
+    document.getElementById("for-in").innerHTML = str;
+
+</script>
+
+</body>
+</html>
