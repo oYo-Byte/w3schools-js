@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Break and Continue</title>
+</head>
+<body>
+
+<h4>The Break Statement</h4>
+<p id="break"></p>
+
+<h4>The Continue Statement</h4>
+<p id="continue"></p>
+
+<script>
+    /**
+     * @file JavaScript Break and Continue
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月22日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    var i, text = '';
+    for (i = 0; i < 10; i++) {
+        if (i === 3) {
+            break;
+        }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("break").innerHTML = text;
+
+    var i, text = '';
+    for (i = 0; i < 10; i++) {
+        if (i === 3) {
+            continue;
+        }
+        text += "The number is " + i + "<br>";
+    }
+    document.getElementById("continue").innerHTML = text;
+
+</script>
+
+</body>
+</html>
