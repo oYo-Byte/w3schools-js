@@ -31,6 +31,18 @@
 <h5>Converting Strings to Numbers</h5>
 <p id="string-to-number"></p>
 
+<h5>The Unary + Operator</h5>
+<p id="unary-operator"></p>
+
+<h5>Converting Booleans to Numbers</h5>
+<p id="boolean-to-number"></p>
+
+<h5>Converting Dates to Numbers</h5>
+<p id="date-to-number"></p>
+
+<h5>Automatic Type Conversion</h5>
+<p id="automatic-type-conversion"></p>
+
 <script>
     /**
      * @file JavaScript Type Conversion
@@ -128,6 +140,25 @@
         Number(" ") + "<br>" +
         Number("") + "<br>" +
         Number("99 88");
+
+    document.getElementById("unary-operator").innerHTML =
+        (+"5") + "<br>" +
+        (+'John');
+
+    document.getElementById("boolean-to-number").innerHTML =
+        Number(false) + "<br>" +
+        Number(true);
+
+    document.getElementById("date-to-number").innerHTML =
+        Number(new Date()) + "<br>" +
+        Number((new Date()).getTime());
+
+    document.getElementById("automatic-type-conversion").innerHTML =
+        (5 + null) + "<br>" +
+        ("5" + null) + "<br>" +
+        ("5" + 2) + "<br>" +
+        ("5" - 2) + "<br>" +
+        ("5" * "2");
 
 </script>
 
