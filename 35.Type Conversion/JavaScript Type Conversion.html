@@ -43,6 +43,27 @@
 <h5>Automatic Type Conversion</h5>
 <p id="automatic-type-conversion"></p>
 
+<h4>JavaScript Type Conversion Table</h4>
+<p id="false"></p>
+<p id="true"></p>
+<p id="zero"></p>
+<p id="one"></p>
+<p id="string-zero"></p>
+<p id="string-000"></p>
+<p id="string-one"></p>
+<p id="NaN"></p>
+<p id="infinity"></p>
+<p id="-infinity"></p>
+<p id="empty-string"></p>
+<p id="20"></p>
+<p id="twenty"></p>
+<p id="empty-array"></p>
+<p id="one-element-array"></p>
+<p id="function"></p>
+<p id="object"></p>
+<p id="null"></p>
+<p id="undefined"></p>
+
 <script>
     /**
      * @file JavaScript Type Conversion
@@ -159,6 +180,106 @@
         ("5" + 2) + "<br>" +
         ("5" - 2) + "<br>" +
         ("5" * "2");
+
+    var b = false;
+    document.getElementById("false").innerHTML =
+        "Number : " + Number(b) + "<br>" +
+        "String : " + String(b) + "<br>" +
+        "Boolean: " + Boolean(b);
+
+    var c = true;
+    document.getElementById("true").innerHTML =
+        "Number : " + Number(c) + "<br>" +
+        "String : " + String(c) + "<br>" +
+        "Boolean: " + Boolean(c);
+
+    document.getElementById("zero").innerHTML =
+        "Number : " + Number(0) + "<br>" +
+        "String : " + String(0) + "<br>" +
+        "Boolean: " + Boolean(0);
+
+    document.getElementById("one").innerHTML =
+        "Number : " + Number(1) + "<br>" +
+        "String : " + String(1) + "<br>" +
+        "Boolean: " + Boolean(1);
+
+    document.getElementById("string-zero").innerHTML =
+        "Number : " + Number('0') + "<br>" +
+        "String : " + String('0') + "<br>" +
+        "Boolean: " + Boolean('0');
+
+    document.getElementById("string-000").innerHTML =
+        "Number : " + Number('000') + "<br>" +
+        "String : " + String('000') + "<br>" +
+        "Boolean: " + Boolean('000');
+
+    document.getElementById("string-one").innerHTML =
+        "Number : " + Number('1') + "<br>" +
+        "String : " + String('1') + "<br>" +
+        "Boolean: " + Boolean('1');
+
+    document.getElementById("NaN").innerHTML =
+        "Number : " + Number(NaN) + "<br>" +
+        "String : " + String(NaN) + "<br>" +
+        "Boolean: " + Boolean(NaN);
+
+    document.getElementById("infinity").innerHTML =
+        "Number : " + Number(Infinity) + "<br>" +
+        "String : " + String(Infinity) + "<br>" +
+        "Boolean: " + Boolean(Infinity);
+
+    document.getElementById("-infinity").innerHTML =
+        "Number : " + Number(-Infinity) + "<br>" +
+        "String : " + String(-Infinity) + "<br>" +
+        "Boolean: " + Boolean(-Infinity);
+
+    document.getElementById("empty-string").innerHTML =
+        "Number : " + Number("") + "<br>" +
+        "String : " + String("") + "<br>" +
+        "Boolean: " + Boolean("");
+
+    document.getElementById("20").innerHTML =
+        "Number : " + Number("20") + "<br>" +
+        "String : " + String("20") + "<br>" +
+        "Boolean: " + Boolean("20");
+
+    document.getElementById("twenty").innerHTML =
+        "Number : " + Number("twenty") + "<br>" +
+        "String : " + String("twenty") + "<br>" +
+        "Boolean: " + Boolean("twenty");
+
+    document.getElementById("empty-array").innerHTML =
+        "Number : " + Number([]) + "<br>" +
+        "String : " + String([]) + "<br>" +
+        "Boolean: " + Boolean([]);
+
+    document.getElementById("one-element-array").innerHTML =
+        "Number : " + Number([20]) + "<br>" +
+        "String : " + String([20]) + "<br>" +
+        "Boolean: " + Boolean([20]);
+
+    document.getElementById("function").innerHTML =
+        "Number : " + Number(function () {
+        }) + "<br>" +
+        "String : " + String(function () {
+        }) + "<br>" +
+        "Boolean: " + Boolean(function () {
+        });
+
+    document.getElementById("object").innerHTML =
+        "Number : " + Number({}) + "<br>" +
+        "String : " + String({}) + "<br>" +
+        "Boolean: " + Boolean({});
+
+    document.getElementById("null").innerHTML =
+        "Number : " + Number(null) + "<br>" +
+        "String : " + String(null) + "<br>" +
+        "Boolean: " + Boolean(null);
+
+    document.getElementById("undefined").innerHTML =
+        "Number : " + Number(undefined) + "<br>" +
+        "String : " + String(undefined) + "<br>" +
+        "Boolean: " + Boolean(undefined);
 
 </script>
 
