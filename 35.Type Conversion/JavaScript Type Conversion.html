@@ -99,8 +99,8 @@
 
     /**
      * 判断入参是不是数组-方式1
-     * @param arr
-     * @returns {boolean}
+     * @param arr 数组
+     * @returns {boolean} 如果入参是数组返回true，否则返回false
      */
     function isArray1(arr) {
         return arr.constructor.toString().indexOf("Array") > -1;
@@ -108,8 +108,8 @@
 
     /**
      * 判断入参是不是数组-方式2
-     * @param arr
-     * @returns {boolean}
+     * @param arr 数组
+     * @returns {boolean} 如果入参是数组返回true，否则返回false
      */
     function isArray2(arr) {
         return arr.constructor === Array;
@@ -120,8 +120,8 @@
 
     /**
      * 判断入参是不是日期对象-方式1
-     * @param date
-     * @returns {boolean}
+     * @param date 日期
+     * @returns {boolean} 如果入参是日期对象返回true，否则返回false
      */
     function isDate1(date) {
         return date.constructor.toString().indexOf("Date") > -1;
@@ -129,8 +129,8 @@
 
     /**
      * 判断入参是不是日期对象-方式2
-     * @param date
-     * @returns {boolean}
+     * @param date 日期
+     * @returns {boolean} 如果入参是日期对象返回true，否则返回false
      */
     function isDate2(date) {
         return date.constructor === Date;
