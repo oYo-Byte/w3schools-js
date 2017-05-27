@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Regular Expressions</title>
+</head>
+<body>
+
+<h4>Using String Methods</h4>
+<h5>Using String search() With a Regular Expression</h5>
+<p id="search"></p>
+
+<h5>Using String search() With String</h5>
+<p id="search-string"></p>
+
+<h5>Use String replace() With a Regular Expression</h5>
+<p id="replace"></p>
+<p id="replace-string"></p>
+
+<h4>Regular Expression Patterns</h4>
+<h5>Using test()</h5>
+<p id="test"></p>
+<p id="shorten-test"></p>
+
+<h5>Using exec()</h5>
+<p id="exec"></p>
+
+<script>
+
+    /**
+     * @file JavaScript Type Conversion
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月27日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    var str = "Hello World";
+    var n = str.search(/World/i);       //Use a regular expression to do a case-insensitive search for "World" in a string
+    document.getElementById("search").textContent = n;
+
+    document.getElementById("search-string").textContent = str.search("World");
+
+    var str = "Visit World!";
+    var res = str.replace(/visit/i, "Hello");
+    document.getElementById("replace").textContent = res;
+    document.getElementById("replace-string").textContent = str.replace("Visit", "Hello");
+
+    var patt = /o/;
+    document.getElementById("test").textContent = patt.test(str);
+    document.getElementById("shorten-test").textContent = /o/.test(str);
+
+    document.getElementById("exec").textContent = /o/.exec(str);
+
+</script>
+</body>
+</html>
