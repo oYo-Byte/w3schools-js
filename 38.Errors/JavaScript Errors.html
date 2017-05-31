@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Errors</title>
+</head>
+<body>
+
+<h4>Errors Will Happen!</h4>
+<p id="error"></p>
+
+<h4>Input Validation Example</h4>
+<p>Please input a number between 5 and 10:</p>
+
+<input id="number">
+<button type="button" onclick="validation()">校验输入</button>
+<button type="button" onclick="validationAndReset()">校验并重置</button>
+<p id="message"></p>
+
+<h4>Range Error</h4>
+<p id="range-error"></p>
+
+<h4>Reference Error</h4>
+<p id="reference-error"></p>
+
+<h4>Syntax Error</h4>
+<p id="syntax-error"></p>
+
+<h4>Type Error</h4>
+<p id="type-error"></p>
+
+<h4>URI Error</h4>
+<p id="uri-error"></p>
+
+<script>
+    /**
+     * @file JavaScript Errors
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年05月31日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    //JavaScript catches console.aaaaaa as an error, and executes the catch code to handle it
+    try {
+        console.aaaaaa("Hello World!");
+    } catch (err) {
+        document.getElementById("error").textContent = err.message;
+    }
+
+    /**
+     * 校验id为number的输入框的值是否合法
+     */
+    function validation() {
+        var message, x;
+        message = document.getElementById("message");
+        message.textContent = "";
+        x = document.getElementById("number").value;
+        try {
+            if (x === "") {
+                throw "empty";
+            }
+            if (isNaN(x)) {
+                throw "not a number";
+            }
+            x = Number(x);
+            if (x < 5) {
+                throw "too low";
+            }
+            if (x > 10) {
+                throw "too high";
+            }
+        } catch (err) {
+            message.textContent = "Input is " + err;
+        }
+    }
+
+    /**
+     * 校验id为number的输入框的值是否合法并且重置为空
+     */
+    function validationAndReset() {
+        var message, x;
+        message = document.getElementById("message");
+        message.textContent = "";
+        x = document.getElementById("number").value;
+        try {
+            if (x === "") {
+                throw "is empty";
+            }
+            if (isNaN(x)) {
+                throw "is not a number";
+            }
+            x = Number(x);
+            if (x < 5) {
+                throw "is too low";
+            }
+            if (x > 10) {
+                throw "is too high";
+            }
+        } catch (err) {
+            message.textContent = "Error: " + err + ".";
+        } finally {
+            document.getElementById("number").value = "";
+        }
+    }
+
+    //A RangeError is thrown if you use a number that is outside the range of legal values
+    var num = 1;
+    try {
+        num.toPrecision(520);   // A number cannot have 520 significant digits
+    } catch (err) {
+        document.getElementById("range-error").textContent = err.name;
+    }
+
+    //A ReferenceError is thrown if you use (reference) a variable that has not been declared
+    var x;
+    try {
+        x = y + 1;   // y cannot be referenced (used)
+    } catch (err) {
+        document.getElementById("reference-error").textContent = err.name;
+    }
+
+    //A SyntaxError is thrown if you try to evaluate code with a syntax error
+    try {
+        eval("console.log('Hello)");   // Missing ' will produce an error
+    } catch (err) {
+        document.getElementById("syntax-error").textContent = err.name;
+    }
+
+    //A TypeError is thrown if you use a value that is outside the range of expected types
+    try {
+        num.toUpperCase();   // You cannot convert a number to upper case
+    } catch (err) {
+        document.getElementById("type-error").textContent = err.name;
+    }
+
+    //A URIError is thrown if you use illegal characters in a URI function
+    try {
+        decodeURI("$$$");   // You cannot URI decode these percent signs
+    } catch (err) {
+        document.getElementById("uri-error").textContent = err.name;
+    }
+
+</script>
+
+</body>
+</html>
