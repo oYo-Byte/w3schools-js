@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Hoisting</title>
+</head>
+<body>
+
+<h4>JavaScript Declarations are Hoisted</h4>
+<p id="hoist"></p>
+
+<h4>JavaScript Initializations are Not Hoisted</h4>
+<p id="not-hoisted"></p>
+
+<script>
+    /**
+     * @file JavaScript Hoisting
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年06月01日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    //In JavaScript, a variable can be declared after it has been used.
+    x = 5; // Assign 5 to x
+
+    var elem = document.getElementById("hoist"); // Find an element
+    elem.textContent = x;                     // Display x in the element
+
+    var x; // Declare x
+
+    //JavaScript only hoists declarations, not initializations.
+    var a = 5; // Initialize a
+
+    document.getElementById("not-hoisted").textContent = a + " " + b;           // Display a and b
+
+    var b = 7; // Initialize b
+
+</script>
+
+</body>
+</html>
