@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Common Mistakes</title>
+</head>
+<body>
+
+<h4>Accidentally Using the Assignment Operator</h4>
+<p id="assign-10"></p>
+<p id="assign-0"></p>
+
+<h4>Expecting Loose Comparison</h4>
+<p id="regular-comparison"></p>
+<p id="strict-comparison"></p>
+<p id="switch">Hello</p>
+
+<h4>Confusing Addition & Concatenation</h4>
+<p id="addition"></p>
+
+<h4>Misunderstanding Floats</h4>
+<p id="float"></p>
+
+<script>
+
+    /**
+     * @file JavaScript Common Mistakes
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年06月07日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    var x = 0;
+    //This if statement returns true (maybe not as expected), because 10 is true
+    document.getElementById("assign-10").textContent = Boolean(x = 10);
+    //This if statement returns false (maybe not as expected), because 0 is false
+    document.getElementById("assign-0").textContent = Boolean(x = 0);
+
+    var a = 10;
+    var b = "10";
+    //In regular comparison, data type does not matter. This if statement returns true
+    document.getElementById("regular-comparison").textContent = Boolean(a == b);
+    //In strict comparison, data type does matter. This if statement returns false
+    document.getElementById("strict-comparison").textContent = Boolean(a === b);
+
+    //It is a common mistake to forget that switch statements use strict comparison
+    switch (a) {
+        case "10":
+            document.getElementById("regular-comparison").textContent = "Hi";
+    }
+
+    //adding a number as a number will produce a different result from adding a number as a string
+    document.getElementById("addition").innerHTML = (10 + 5) + "<br>" + (10 + "5");
+
+    //All programming languages, including JavaScript, have difficulties with precise floating point values
+    var c = 0.1, d = 0.2;
+    var e = c + d;
+    document.getElementById("float").innerHTML = e;
+
+</script>
+
+</body>
+</html>
