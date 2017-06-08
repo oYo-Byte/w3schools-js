@@ -21,6 +21,9 @@
 <h4>Misunderstanding Floats</h4>
 <p id="float"></p>
 
+<h4>Misplacing Semicolon</h4>
+<p id="misplacing-semicolon">Hello</p>
+
 <script>
 
     /**
@@ -58,6 +61,12 @@
     var c = 0.1, d = 0.2;
     var e = c + d;
     document.getElementById("float").innerHTML = e;
+
+    var f = 5;
+    if (f === 19);
+    {
+        document.getElementById("misplacing-semicolon").textContent = 'Hi';
+    }
 
 </script>
 
