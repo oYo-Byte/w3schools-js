@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Validation API</title>
+</head>
+<body>
+
+<h4>Constraint Validation DOM Methods</h4>
+<h5>The checkValidity() Method</h5>
+<input id="check-validity-input" type="number" min="100" max="300" required>
+<button onclick="check() || checkRangeOverflow() || checkRangeUnderflow()">OK</button>
+<p id="check-validity-msg"></p>
+
+<h4>Constraint Validation DOM Properties</h4>
+<h5>Validity Properties</h5>
+<p id="check-validity-overflow-msg"></p>
+<p id="check-validity-underflow-msg"></p>
+
+
+<script>
+    /**
+     * @file JavaScript Validation API
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年06月14日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    /**
+     * 判断input的值是否非法，如果非法即显示非法信息
+     */
+    function check() {
+        var input = document.getElementById("check-validity-input");
+        if (input.checkValidity() === false) {
+            document.getElementById("check-validity-msg").textContent = input.validationMessage;
+        }
+    }
+
+    /**
+     * 判断input的值是否大于最大值，并显示信息
+     */
+    function checkRangeOverflow() {
+        var txt = "";
+        if (document.getElementById("check-validity-input").validity.rangeOverflow) {
+            txt = "Value too large";
+        }
+        document.getElementById("check-validity-overflow-msg").textContent = txt;
+    }
+
+    /**
+     * 判断input的值是否小于最小值，并显示信息
+     */
+    function checkRangeUnderflow() {
+        var txt = "";
+        if (document.getElementById("check-validity-input").validity.rangeUnderflow) {
+            txt = "Value too small";
+        }
+        document.getElementById("check-validity-underflow-msg").textContent = txt;
+    }
+
+</script>
+
+</body>
+</html>
