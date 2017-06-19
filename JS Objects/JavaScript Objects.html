@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+
+<script>
+    /**
+     * @file JavaScript Objects
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年06月19日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    //Using an Object Literal
+    var personWithLiteral = {firstName: "John", lastName: "Doe", age: 50, eyeColor: "blue"};
+    console.log(typeof personWithLiteral);
+
+    //Using the JavaScript Keyword new
+    var personWithNew = new Object();
+    personWithNew.firstName = "John";
+    personWithNew.lastName = "Doe";
+    personWithNew.age = 50;
+    personWithNew.eyeColor = "blue";
+
+    //Using an Object Constructor
+    function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+    var father = new Person("John", "Doe", 50, "blue");
+    var mother = new Person("Sally", "Rally", 48, "green");
+
+    //Built-in JavaScript Constructors
+    var x1 = new Object();    // A new Object object
+    console.log('x1', x1 instanceof Object);
+    var x2 = new String();    // A new String object
+    console.log('x2', x2 instanceof String);
+    var x3 = new Number();    // A new Number object
+    console.log('x3', x3 instanceof Number);
+    var x4 = new Boolean();   // A new Boolean object
+    console.log('x4', x4 instanceof Boolean);
+    var x5 = new Array();     // A new Array object
+    console.log('x5', x5 instanceof Array);
+    var x6 = new RegExp();    // A new RegExp object
+    console.log('x6', x6 instanceof RegExp);
+    var x7 = new Function();  // A new Function object
+    console.log('x7', x7 instanceof Function);
+    var x8 = new Date();      // A new Date object
+    console.log('x8', x8 instanceof Date);
+</script>
+
+</body>
+</html>
