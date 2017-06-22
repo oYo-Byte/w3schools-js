@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Object Prototypes</title>
+</head>
+<body>
+
+<h4>Creating a Prototype</h4>
+<p id="create-prototype"></p>
+
+<h4>Adding Properties and Methods to Objects</h4>
+<h5>Adding a Property to an Object</h5>
+<p id="add-property-to-object"></p>
+
+<h5>Adding a Method to an Object</h5>
+<p id="add-method-to-object"></p>
+
+<h5>Adding Properties to a Prototype</h5>
+<p id="add-property-to-prototype"></p>
+
+<h5>Using the prototype Property</h5>
+<p id="add-property-with-prototype-property"></p>
+<p id="add-method-with-prototype-property"></p>
+
+<script>
+    /**
+     * @file JavaScript Object Prototypes
+     *
+     * @author 张志杰 <zhangzhijie@atlasdata.com.cn>
+     *     创建于 2017年06月22日
+     *
+     * @copyright (c) 2014-2017 海量云图（北京）数据技术有限公司
+     */
+
+    function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+    }
+
+    var father = new Person("John", "Doe", 50, "blue");
+    var mother = new Person("Sally", "Rally", 48, "green");
+
+    document.getElementById("create-prototype").textContent =
+        "My father's age is " + father.age + ". My mother's age is " + mother.age;
+
+    father.nationality = "English";
+    document.getElementById("add-property-to-object").textContent =
+        "My father's nationality is " + father.nationality;
+
+    father.name = function () {
+        return this.firstName + " " + this.lastName;
+    };
+    document.getElementById("add-method-to-object").textContent =
+        "My father's name is " + father.name();
+
+    Person.nationality = "English";
+    document.getElementById("add-property-to-prototype").textContent =
+        "My mother's nationality is " + mother.nationality;
+
+    Person.prototype.nationality = "English";
+    document.getElementById("add-property-with-prototype-property").textContent =
+        "My mother's nationality is " + mother.nationality;
+
+    Person.prototype.name = function () {
+        return this.firstName + " " + this.lastName;
+    };
+    document.getElementById("add-method-with-prototype-property").textContent =
+        "My mother's name is " + mother.name();
+</script>
+
+</body>
+</html>
